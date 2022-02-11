@@ -15,9 +15,19 @@ class Calculator {
         }
     }
 
-    del() {
+    reset() {
         this.screenContent = '0'
         this.screen.innerHTML = this.screenContent
+    }
+
+    del() {
+        if(this.screenContent.substring(0, this.screenContent.length - 1) === '') {
+            this.screenContent = '0'
+            this.screen.innerHTML = this.screenContent
+        } else {
+            this.screenContent = this.screenContent.substring(0, this.screenContent.length - 1)
+            this.screen.innerHTML = this.screenContent
+        }
     }
     
     doResult() {
@@ -30,6 +40,7 @@ class Calculator {
 const calculator = new Calculator()
 
 const calc = (e) => calculator.calc(e)
-const del = () => calculator.del()
+const reset = () => calculator.reset()
 const takeResult = () => calculator.doResult()
+const del = () => calculator.del()
 
