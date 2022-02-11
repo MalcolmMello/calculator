@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <title>Calculadora</title>
+</head>
+<body>
+    <section class="calculator">
+        <div class="calculator--area">
+            <div class="title">
+                <h1>calc</h1>
+                <div class="theme--area">
+                    <p>Theme</p>
+                    <div class="theme--bar">
+                        <div class="theme--bar--line theme1" onclick="theme1()"></div>
+                        <div class="theme--bar--line theme2" onclick="theme2()"></div>
+                        <div class="theme--bar--line theme3" onclick="theme3()"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen">
+                0
+            </div>
+            <div class="keyboard">
+                <div class="line">
+                    <div class="keys" onclick="calc('7')">7</div>
+                    <div class="keys" onclick="calc('8')">8</div>
+                    <div class="keys" onclick="calc('9')">9</div>
+                    <div class="reset--del" onclick="del()">DEL</div>
+                </div>
+                <div class="line">
+                    <div class="keys" onclick="calc('4')">4</div>
+                    <div class="keys" onclick="calc('5')">5</div>
+                    <div class="keys" onclick="calc('6')">6</div>
+                    <div class="keys" onclick="calc('+')">+</div>
+                </div>
+                <div class="line">
+                    <div class="keys" onclick="calc('1')">1</div>
+                    <div class="keys" onclick="calc('2')">2</div>
+                    <div class="keys" onclick="calc('3')">3</div>
+                    <div class="keys" onclick="calc('-')">-</div>
+                </div>
+                <div class="line">
+                    <div class="keys" onclick="calc('.')">.</div>
+                    <div class="keys" onclick="calc('0')">0</div>
+                    <div class="keys" onclick="calc('/')">/</div>
+                    <div class="keys" onclick="calc('*')">X</div>
+                </div>
+                <div class="line2">
+                    <div class="reset--del" onclick="del()">RESET</div>
+                    <div class="result" onclick="takeResult()">=</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="object.js"></script>
+    <script src="themeswitcher.js"></script>
+</body>
+</html>

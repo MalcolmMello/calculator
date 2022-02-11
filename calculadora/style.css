@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Spartan', sans-serif;
+    background-color: hsl(222, 26%, 31%);
+    transition: all ease 0.2s
+}
+
+.calculator {
+    width: 400px;
+    margin: auto;
+    padding: 10px
+}
+
+.calculator--area {
+    height: min-content;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    transition: all ease 0.2s;
+    padding: 10px;
+}
+
+.theme--bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme--area .theme--bar--line{
+    display: flex;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme1 {
+    background-color: hsl(224, 36%, 15%);
+}
+
+.theme2 {
+    background-color: #CCC;
+}
+
+.theme3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.screen {
+    display: flex;
+    transition: all ease 0.2s;
+    background-color: hsl(224, 36%, 15%);
+    color: #FFF;
+    padding: 40px;
+    border-radius: 10px;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    transition: all ease 0.2s;
+    background-color: hsl(224, 36%, 15%);
+    padding: 10px;
+    border-radius: 10px
+}
+
+.line {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.line2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.line .keys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.2s;
+    background: #CCC;
+    color: hsl(223, 31%, 20%);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.line2 .result {
+    display: flex;
+    transition: all ease 0.2s;
+    background-color: hsl(6, 63%, 50%);
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.line2 .reset--del, .line .reset--del {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: hsl(225, 21%, 49%);
+    color: #FFF;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
